@@ -3,6 +3,15 @@ import { initGlobalAPI } from './global-api/index'
 import { isServerRendering } from 'core/util/env'
 import { FunctionalRenderContext } from 'core/vdom/create-functional-component'
 
+/**
+ * 添加全局API静态方法
+ * 添加四个属性：
+ *  $isServer
+ *  $ssrContext  用于ssr
+ *  FunctionalRenderContext
+ *  __VERSION__  vue版本号
+ */
+
 initGlobalAPI(Vue)
 
 Object.defineProperty(Vue.prototype, '$isServer', {

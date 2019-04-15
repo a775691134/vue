@@ -19,6 +19,12 @@ import { patch } from './patch'
 import platformDirectives from './directives/index'
 import platformComponents from './components/index'
 
+/**
+ * 覆盖 ./config.js 中的属性值
+ * 修改 Vue.option 中的两个属性值
+ * 如果当前是浏览器环境则在 Vue 原型链中设置 __patch__ 方法为 inBrowser，其他则是空
+ * 在Vue中挂载 mount 方法
+ */
 // install platform specific utils
 Vue.config.mustUseProp = mustUseProp
 Vue.config.isReservedTag = isReservedTag

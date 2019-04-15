@@ -34,6 +34,7 @@ export function initGlobalAPI (Vue: GlobalAPI) {
   // exposed util methods.
   // NOTE: these are not considered part of the public API - avoid relying on
   // them unless you are aware of the risk.
+  // 在源码中有但不推荐使用 并且官网上面也没有介绍
   Vue.util = {
     warn,
     extend,
